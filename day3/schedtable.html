@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      :root {
+        --table-padding: 0.25rem;
+        --table-border-color: hsl(0, 0%, 20%);
+        --table-cell-bgcolor: hsl(0, 0%, 85%);
+        --day-cell-bgcolor: hsla(53, 58%, 48%);
+        --time-cell-bgcolor: hsl(16, 55%, 50%);
+        --topic-cell-bgcolor: hsla(7, 58%, 49%);
+        --duration-cell-bgcolor: rgb(86, 197, 52);
+        --day-heading-cell-bgcolor: rgb(51, 193, 77);
+        --seminar-heading-cell-bgcolor: hsl(181, 55%, 50%);
+        --schedule-heading-cell-bgcolor: rgb(52, 161, 197);
+        --topic-heading-cell-bgcolor: rgb(52, 83, 197);
+      }
+
+      table,
+      th {
+        color: hsl(0, 0%, 15%);
+        border: 2px solid var(--table-border-color);
+        border-collapse: collapse;
+        padding: var(--table-padding);
+        background-color: var(--bg-gray);
+      }
+
+      td {
+        border: 2px solid var(--table-border-color);
+        padding: var(--table-padding);
+      }
+
+      .day-heading {
+        background-color: var(--day-heading-cell-bgcolor);
+      }
+      .seminar-heading {
+        background-color: var(--seminar-heading-cell-bgcolor);
+      }
+      .schedule-heading {
+        background-color: var(--schedule-heading-cell-bgcolor);
+      }
+      .topic-heading {
+        background-color: var(--topic-heading-cell-bgcolor);
+      }
+
+      .day {
+        background-color: var(--day-cell-bgcolor);
+      }
+
+      .time {
+        background-color: var(--time-cell-bgcolor);
+      }
+
+      .topic {
+        background-color: var(--topic-cell-bgcolor);
+      }
+
+      .duration {
+        background-color: var(--duration-cell-bgcolor);
+      }
+    </style>
+  </head>
+
+  <body>
+    <table>
+      <!-- row 1 -->
+      <tr>
+        <th class="day-heading" rowspan="3">Day</th>
+        <th class="seminar-heading" colspan="3">Seminar</th>
+      </tr>
+
+      <!-- row 2 -->
+      <tr>
+        <th class="schedule-heading" colspan="2">Schedule</th>
+        <th class="topic-heading" rowspan="2">Topic</th>
+      </tr>
+
+      <!-- row 3 -->
+      <tr>
+        <th class="duration">Begin</th>
+        <th class="duration">End</th>
+      </tr>
+
+      <!-- row 4 -->
+      <tr>
+        <th class="day" rowspan="2">Monday</th>
+        <th class="time" rowspan="2">8:00 a.m</th>
+        <th class="time" rowspan="2">5:00 p.m</th>
+        <th class="topic">Introduction to XML</th>
+      </tr>
+
+      <!-- row 5 -->
+      <tr>
+        <th class="topic">Validity: DTD and Relax NG</th>
+      </tr>
+
+      <!-- row 6 -->
+      <tr>
+        <th class="day" rowspan="3">Tuesday</th>
+        <th class="time">8:00 a.m.</th>
+        <th class="time">11:00 a.m.</th>
+        <th class="topic" rowspan="2">Xpath</th>
+      </tr>
+
+      <!-- row 7 -->
+      <tr>
+        <th class="time">11:00 a.m.</th>
+        <th class="time">2:00 p.m.</th>
+      </tr>
+
+      <!-- row 8 -->
+      <tr>
+        <th class="time">2:00 p.m.</th>
+        <th class="time">5:00 p.m.</th>
+        <th class="topic">XSL Transformation</th>
+      </tr>
+
+      <!-- row 9 -->
+      <tr>
+        <th class="day">Wednesday</th>
+        <th class="time">8:00 a.m.</th>
+        <th class="time">12:00 p.m.</th>
+        <th class="topic">XSL Formatting Objects</th>
+      </tr>
+    </table>
+  </body>
+</html>

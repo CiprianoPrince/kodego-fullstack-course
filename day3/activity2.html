@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    :root {
+      --table-padding: 0.25rem;
+      --table-border-color: hsl(0, 0%, 20%);
+      --si-heading-clr: hsl(0, 0%, 50%);
+      --table-cell-bgcolor: hsl(0, 0%, 85%);
+      --si-heading-clr: hsl(0, 0%, 50%);
+      --ci-heading-clr: hsl(0, 0%, 30%);
+      --ci-subheading-clr: hsl(0, 0%, 40%);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    table,
+    th {
+      border: 2px solid var(--table-border-color);
+      border-collapse: collapse;
+      padding: var(--table-padding);
+      background-color: var(--bg-gray);
+    }
+
+    td {
+      border: 2px solid var(--table-border-color);
+      padding: var(--table-padding);
+    }
+
+    .si-heading {
+      background-color: var(--si-heading-clr);
+    }
+
+    .si-cell {
+      background-color: var(--si-cell-clr);
+    }
+
+    .ci-heading {
+      background-color: var(--ci-heading-clr);
+    }
+
+    .ci-subheading {
+      background-color: var(--ci-subheading-clr);
+    }
+  </style>
+
+  <body>
+    <!-- create a your first table -->
+
+    <table>
+      <caption>
+        This is Table 1
+      </caption>
+
+      <thead>
+        <tr>
+          <th>Heading 1</th>
+          <th>Heading 2</th>
+          <th>Heading 3</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td class="cell-1">Row 1, Cell 1</td>
+          <td class="cell-2">Row 1, Cell 2</td>
+          <td class="cell-3">Row 1, Cell 3</td>
+        </tr>
+
+        <tr>
+          <td class="cell-1">Row 2, Cell 1</td>
+          <td class="cell-2">Row 2, Cell 2</td>
+          <td class="cell-3">Row 2, Cell 3</td>
+        </tr>
+
+        <tr>
+          <td class="cell-1">Row 3, Cell 1</td>
+          <td class="cell-2">Row 3, Cell 2</td>
+          <td class="cell-3">Row 3, Cell 3</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <th>Heading 1</th>
+          <th>Heading 2</th>
+          <th>Heading 3</th>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- create a student information table -->
+
+    <table id="student-info">
+      <caption>
+        Student Information
+      </caption>
+
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Math</th>
+          <th>Science</th>
+          <th>English</th>
+          <th>Physics</th>
+          <th>Gen. Know.</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td class="si-cell">Master Prince</td>
+          <td class="si-cell">99</td>
+          <td class="si-cell">99</td>
+          <td class="si-cell">99</td>
+          <td class="si-cell">99</td>
+          <td class="si-cell">99</td>
+        </tr>
+
+        <tr>
+          <td class="si-cell">Coach Angelo</td>
+          <td class="si-cell">69</td>
+          <td class="si-cell">69</td>
+          <td class="si-cell">69</td>
+          <td class="si-cell">69</td>
+          <td class="si-cell">69</td>
+        </tr>
+
+        <tr>
+          <td class="si-cell">Sir Junel</td>
+          <td class="si-cell">100</td>
+          <td class="si-cell">100</td>
+          <td class="si-cell">100</td>
+          <td class="si-cell">100</td>
+          <td class="si-cell">100</td>
+        </tr>
+
+        <tr>
+          <td class="si-cell">Mommy Glenn</td>
+          <td class="si-cell">88</td>
+          <td class="si-cell">88</td>
+          <td class="si-cell">88</td>
+          <td class="si-cell">88</td>
+          <td class="si-cell">88</td>
+        </tr>
+
+        <tr>
+          <td class="si-cell">Kamahalan Ciel</td>
+          <td class="si-cell">&infin;</td>
+          <td class="si-cell">&infin;</td>
+          <td class="si-cell">&infin;</td>
+          <td class="si-cell">&infin;</td>
+          <td class="si-cell">&infin;</td>
+        </tr>
+      </tbody>
+
+      <!-- <tfoot>
+        <tr>
+          <th>Name</th>
+          <th>Math</th>
+          <th>Science</th>
+          <th>English</th>
+          <th>Physics</th>
+          <th>Gen. Know.</th>
+        </tr>
+      </tfoot> -->
+    </table>
+
+    <!-- use colspan in a table -->
+
+    <table>
+      <caption>
+        Contact Information
+      </caption>
+      <thead>
+        <tr>
+          <th class="ci-heading" rowspan="2">Name</th>
+          <th class="ci-heading" colspan="3">Contact No.</th>
+        </tr>
+        <tr>
+          <th class="ci-subheading">Smart</th>
+          <th class="ci-subheading">Globe</th>
+          <th class="ci-subheading">Landline</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td class="cell">Prince</td>
+          <td class="cell">11111111</td>
+          <td class="cell">333-3333-333</td>
+          <td class="cell">55555555</td>
+        </tr>
+        <tr>
+          <td class="cell">Ton</td>
+          <td class="cell">2222222</td>
+          <td class="cell">444-4444-444</td>
+          <td class="cell">5555555</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

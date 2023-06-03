@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+
+    <style>
+      :root {
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: hsl(0, 0%, 94%);
+      }
+
+      #first-form-div {
+        box-shadow: -0.25rem 0.25rem 0.25rem hsl(306, 62%, 48%, 0.5);
+        margin: 1rem;
+        border: 2px solid hsl(306, 62%, 48%);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        background-color: hsl(0, 0%, 96%);
+      }
+
+      #first-form {
+      }
+
+      .form-fieldset {
+        padding: 0.5rem;
+      }
+
+      .first-form-label {
+        display: inline-block;
+      }
+
+      .first-form-input {
+        width: 100%;
+        margin: 0.25rem 0 0.25rem 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="first-form-div">
+      <h2 style="color: hsl(306, 59%, 50%)">HTML Form Tags and Attribute</h2>
+
+      <form id="first-form">
+        <fieldset class="form-fieldset">
+          <legend>CONTACT FORM</legend>
+
+          <label class="first-form-label" for="first_name">First Name:</label>
+          <input class="first-form-input" type="text" name="first_name" size="50" placeholder="First name" value="Prince" readonly />
+
+          <label class="first-form-label" for="last_name">Last Name:</label>
+          <input class="first-form-input" type="text" name="last_name" size="50" placeholder="Last name" />
+
+          <label class="first-form-label" for="email"> Email:</label>
+          <input class="first-form-input" type="email" name="email" placeholder="Email" />
+
+          <label class="first-form-label" for="subject"> Email:</label>
+          <input class="first-form-input" type="subject" name="subject" placeholder="Subject" />
+
+          <label for="message" class="first-form-label">Message:</label>
+          <textarea class="first-form-input" name="message" id="" cols="10" rows="5" placeholder="Type our message..."></textarea>
+
+          <input type="submit" value="Send" class="first-form-input" />
+
+          <input type="reset" value="Reset" class="first-form-input" />
+        </fieldset>
+      </form>
+
+      <form action="">
+        <fieldset class="form-fieldset">
+          <legend>SAMPLE FORM CONTROL</legend>
+
+          <label for="">Name:</label>
+          <input class="first-form-input" ype="text" name="personName" id="personName" />
+
+          <label for="">Birthday:</label>
+          <input class="first-form-input" type="date" name="personbirthday" id="personbirthday" />
+
+          <label for="timeAppointment">Time Appointment:</label>
+          <input class="first-form-input" type="datetime-local" name="timeAppointment" id="timeAppointment" />
+
+          <label for="">Select a file:</label>
+          <input class="first-form-input" type="file" name="file" id="file" />
+
+          <label for="month">Month:</label>
+          <input class="first-form-input" type="month" name="month" id="month" />
+
+          <label for="month">Week:</label>
+          <input class="first-form-input" type="week" name="week" id="week" />
+
+          <label for="Yes" style="display: block"
+            >Radio Button:
+            <input class="" type="radio" name="radioButton" id="radioButton" value="Yes" />
+            <label for="Yes">Yes</label>
+            <input class="" type="radio" name="radioButton" id="radioButton" value="No" />
+            <label for="No">No</label>
+          </label>
+
+          <label for="volume">Volume:</label>
+          <input class="first-form-input" type="range" name="volume" id="volume" />
+
+          <label for="Hobbies" style="display: block"
+            >Hobbies:
+            <input class="" type="checkbox" name="gaming" id="gaming" value="Gaming" />
+            <label for="gaming">Gaming</label>
+            <input class="" type="checkbox" name="coding" id="coding" value="Coding" />
+            <label for="coding">Coding</label>
+            <input class="" type="checkbox" name="cooking" id="cooking" value="Cooking" />
+            <label for="cooking">Cooking</label>
+          </label>
+
+          <label for="number">Number:</label>
+          <input class="first-form-input" type="number" name="number" id="number" />
+
+          <input class="first-form-input" type="hidden" name="hidden" id="hidden" />
+
+          <label for="city">Select City:</label>
+          <select class="first-form-input" name="city" id="city">
+            <option value="caloocan">Caloocan</option>
+            <option value="malabon">Malabon</option>
+            <option value="quezon">Quezon</option>
+            <option value="makati">Makati</option>
+            <option value="taguig">Taguig</option>
+          </select>
+
+          <label for="regionProvince">Select Region Province:</label>
+          <select class="first-form-input" name="regionProvince" id="regionProvince">
+            <optgroup label="Region I">
+              <option value="ilocosSur">Ilocos Sur</option>
+              <option value="ilocosNorte">Ilocos Norte</option>
+              <option value="laUnion">La Union</option>
+            </optgroup>
+
+            <optgroup label="Region II">
+              <option value="batanes">Batanes</option>
+              <option value="cagayan">Cagayan</option>
+              <option value="isabela">Isabela</option>
+            </optgroup>
+
+            <optgroup label="Region III">
+              <option value="bataan">Bataan</option>
+              <option value="cagayan">Cagayan</option>
+              <option value="isabela">Isabela</option>
+            </optgroup>
+          </select>
+
+          <label for="tel">Telephone:</label>
+          <input class="first-form-input" type="tel" name="tel" id="tel" pattern="999-9999-999" />
+
+          <input type="image" src="img/button.png" alt="button" width="100" height="50" />
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

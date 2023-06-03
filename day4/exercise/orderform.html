@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        color: transparent;
+        text-shadow: 0 0 1.2px #000;
+      }
+
+      h2 {
+        color: hsl(0, 99%, 70%);
+        padding: 1rem 0 0 0.5rem;
+        text-shadow: 0 0 0px #000;
+      }
+
+      input {
+        padding: 0.15rem;
+      }
+
+      input,
+      textarea {
+        border-left: 2.5px solid hsl(0, 0%, 0%, 0.7);
+        border-top: 2.5px solid hsl(0, 0%, 0%, 0.7);
+        border-bottom: 2px solid hsl(0, 0%, 0%, 0.1);
+        border-right: 2px solid hsl(0, 0%, 0%, 0.1);
+        color: transparent;
+        text-shadow: 0 0 1px #000;
+      }
+
+      textarea {
+        padding: 0.25rem;
+        font-family: 'Courier New', Courier, monospace;
+        overflow-y: scroll;
+        resize: none;
+      }
+
+      table {
+        margin: 1rem 1rem 3rem 1rem;
+      }
+
+      .table-info-data.label {
+        text-align: right;
+      }
+
+      .table-info-input {
+        width: 100%;
+      }
+
+      .table-box {
+        border: 2px solid hsl(0, 0%, 0%, 0.4);
+      }
+
+      .table-box-head {
+        text-align: left;
+        font-weight: 900;
+      }
+
+      .table-box-head,
+      .table-box-data {
+        padding: 0.05rem 0rem;
+        border: 2px solid hsl(0, 0%, 0%, 0.4);
+      }
+
+      .table-box-input.quantity {
+        width: 100%;
+      }
+
+      .table-box-input.total {
+        width: 100%;
+      }
+
+      .table-box-data.total {
+        text-align: right;
+      }
+
+      .table-card-details {
+        /* border: 2px solid hsl(0, 0%, 0%, 0.4); */
+      }
+
+      .table-card-details-data {
+        padding-bottom: 0.25rem;
+      }
+
+      .table-card-details-data.main-label {
+        font-weight: 600;
+      }
+
+      .table-card-details-data.card-type {
+        padding-left: 0.25rem;
+      }
+
+      .table-card-details-input.expiry-date {
+        width: 50%;
+      }
+
+      .table-card-details-data.radio {
+        padding-left: 0.5rem;
+      }
+
+      .table-delivery-address-data.main-label {
+        font-weight: 600;
+      }
+
+      .form-button {
+        border-top: 1px solid hsl(0, 0%, 0%, 0.5);
+        border-bottom: 2.5px solid hsl(0, 0%, 0%, 0.7);
+        border-left: 1px solid hsl(0, 0%, 0%, 0.5);
+        border-right: 2.5px solid hsl(0, 0%, 0%, 0.7);
+        background-color: hsl(0, 0%, 70%);
+        padding: 0 0.5rem;
+      }
+
+      .form-button.reset {
+        border-top: 1px solid hsl(0, 0%, 0%, 0.1);
+        border-left: 1px solid hsl(0, 0%, 0%, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <h2>Land Of Boxes Order Form</h2>
+
+      <table class="table-info">
+        <!-- create text input box with label Name: -->
+        <tr>
+          <td class="table-info-data label"><label for="name">Name:</label></td>
+          <td class="table-info-data"><input class="table-info-input" type="text" name="name" id="name" value="Walla Brody" /><br /></td>
+        </tr>
+
+        <!-- create email input box with label Email: -->
+        <tr>
+          <td class="table-info-data label"><label for="email">Email:</label></td>
+          <td class="table-info-data"><input class="table-info-input" type="text" name="email" id="email" value="w.brody@widgetsales.com" /><br /></td>
+        </tr>
+
+        <!-- create text area with label Address: -->
+
+        <tr>
+          <td class="table-info-data label"><label for="address">Address:</label></td>
+          <td class="table-info-data">
+            <textarea name="address" id="address" cols="32" rows="5">162 Main Road&#13;&#10;Rondebosch&#13;&#10;Cape Town</textarea>
+          </td>
+        </tr>
+
+        <!-- create number input box with label Postal: -->
+
+        <tr>
+          <td class="table-info-data label"><label for="postal">Postcode:</label></td>
+          <td class="table-info-data"><input type="number" name="postal" id="postal" value="7700" /></td>
+        </tr>
+      </table>
+
+      <table class="table-box">
+        <tr>
+          <th class="table-box-head">Product</th>
+          <th class="table-box-head">Part Number</th>
+          <th class="table-box-head" style="width: 10px">Quantity</th>
+          <th class="table-box-head">Unit Price</th>
+          <th class="table-box-head" style="width: 130px">SubTotal</th>
+        </tr>
+
+        <tr>
+          <td class="table-box-data">EconoBox</td>
+          <td class="table-box-data">LB100</td>
+          <td class="table-box-data"><input class="table-box-input quantity" type="number" name="" id="" value="3" /></td>
+          <td class="table-box-data">R5</td>
+          <td class="table-box-data"><input class="table-box-input total" type="text" value="R15" /></td>
+        </tr>
+
+        <tr>
+          <td class="table-box-data">Standard Box</td>
+          <td class="table-box-data">LB200</td>
+          <td class="table-box-data"><input class="table-box-input quantity" type="number" name="" id="" value="4" /></td>
+          <td class="table-box-data">R10</td>
+          <td class="table-box-data"><input class="table-box-input total" type="text" value="R40" /></td>
+        </tr>
+
+        <tr>
+          <td class="table-box-data">Premium BoxTD></td>
+          <td class="table-box-data">LB300</td>
+          <td class="table-box-data"><input class="table-box-input quantity" type="number" name="" id="" value="1" /></td>
+          <td class="table-box-data">R15</td>
+          <td class="table-box-data"><input class="table-box-input total" type="text" value="R15" /></td>
+        </tr>
+
+        <tr>
+          <td class="table-box-data">Deluxe BoxTD></td>
+          <td class="table-box-data">LB400</td>
+          <td class="table-box-data"><input class="table-box-input quantity" type="number" name="" id="" value="0" /></td>
+          <td class="table-box-data">R20</td>
+          <td class="table-box-data"><input class="table-box-input total" type="text" value="" /></td>
+        </tr>
+
+        <tr>
+          <td class="table-box-data">Super Deluxe BoxTD></td>
+          <td class="table-box-data">LB500</td>
+          <td class="table-box-data"><input class="table-box-input quantity" type="number" name="" id="" value="1" /></td>
+          <td class="table-box-data">R30</td>
+          <td class="table-box-data"><input class="table-box-input total" type="text" value="R30" /></td>
+        </tr>
+
+        <tr>
+          <td class="table-box-data total" colspan="4">Total:</td>
+          <td class="table-box-data"><input class="table-box-input total" type="text" value="R100" /></td>
+        </tr>
+      </table>
+
+      <table class="table-card-details">
+        <tr>
+          <td class="table-card-details-data main-label" colspan="3"><p>Credit Card Details</p></td>
+        </tr>
+
+        <tr>
+          <td class="table-card-details-data card-type" colspan="3"><label for="cardType">Card Type:</label></td>
+        </tr>
+
+        <tr>
+          <td class="table-card-details-data radio">
+            <input type="radio" name="cardType" id="cardType" value="Mastercard" checked />
+            <label for="">Mastercard</label>
+          </td>
+
+          <td class="table-card-details-data">
+            <label for="cardNumber">Card Number</label>
+          </td>
+
+          <td class="table-card-details-data">
+            <input type="number" value="45645" />
+          </td>
+        </tr>
+
+        <tr>
+          <td class="table-card-details-data radio">
+            <input type="radio" name="cardType" id="cardType" value="Visa" />
+            <label for="">Visa</label>
+          </td>
+
+          <td class="table-card-details-data">
+            <label for="expiryDate">Expiry Date</label>
+          </td>
+
+          <td class="table-card-details-data">
+            <input class="table-card-details-input expiry-date" type="text" value="03/99" />
+          </td>
+        </tr>
+
+        <tr>
+          <td class="table-card-details-data radio">
+            <input type="radio" name="cardType" id="cardType" value="American Express" /> <label for="">American Express</label>
+          </td>
+          <td class="table-card-details-data" colspan="2"></td>
+        </tr>
+
+        <tr>
+          <td class="table-card-details-data radio">
+            <input type="radio" name="cardType" id="cardType" value="Diners Club" /> <label for="">Diners Club</label>
+          </td>
+          <td class="table-card-details-data" colspan="2"></td>
+        </tr>
+      </table>
+
+      <table class="table-delivery-address">
+        <tr>
+          <td class="table-delivery-address-data main-label">
+            <label for="deliveryAddress">Delivery Address:</label>
+          </td>
+
+          <td class="table-delivery-address-data">
+            <textarea name="deliveryAddress" id="deliveryAddress" cols="26" rows="5">162 Main Road&#13;&#10;Rondebosch&#13;&#10;Cape Town</textarea>
+          </td>
+        </tr>
+      </table>
+
+      <input class="form-button" type="submit" value="Send order" />
+      <input class="form-button reset" type="reset" value="Clear form" />
+    </form>
+  </body>
+</html>

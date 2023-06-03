@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #table {
+        width: 20rem;
+        border: 2px solid hsl(0, 0%, 0%);
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid hsl(0, 0%, 0%);
+        padding: 0.2rem;
+        white-space: nowrap;
+      }
+
+      .table-input {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="">
+      <table id="table">
+        <tr>
+          <th colspan="4"><h2>REGISTRATION FORM</h2></th>
+        </tr>
+
+        <tr>
+          <td><label for="firstName">First Name:</label></td>
+          <td><input class="table-input" type="text" name="firstName" id="firstName" placeholder="First Name" /></td>
+        </tr>
+
+        <tr>
+          <td><label for="middleName">Middle Name:</label></td>
+          <td><input class="table-input" type="text" name="middleName" id="middleName" placeholder="Middle Name" /></td>
+        </tr>
+
+        <tr>
+          <td><label for="lastName">Last Name:</label></td>
+          <td><input class="table-input" type="text" name="lastName" id="lastName" placeholder="Last Name" /></td>
+        </tr>
+
+        <tr>
+          <td><label for="address">Address:</label></td>
+          <td><textarea class="table-input" name="address" id="address" placeholder="Address"></textarea></td>
+        </tr>
+
+        <tr>
+          <td><label for="gender">Gender:</label></td>
+          <td>
+            <input type="radio" name="gender" value="male" />
+            <label for="gender">Male</label>
+            <input type="radio" name="gender" value="female" />
+            <label for="gender">Female</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="address">Select Career Path:</label></td>
+          <td>
+            <select class="table-input" name="address" id="address" placeholder="Address">
+              <option value="frontEndDevelopment">Front-End Development</option>
+              <option value="backEndDevelopment">Back-End Development</option>
+              <option value="fullStackDevelopment">Full Stack Development</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="technicalSkills">Technical Skills:</label></td>
+          <td>
+            <input type="checkbox" name="html" id="html" value="html" />
+            <label for="html">Html</label>
+
+            <input type="checkbox" name="css" id="css" value="css" />
+            <label for="css">Css</label>
+
+            <input type="checkbox" name="javascript" id="javascript" value="javascript" />
+            <label for="javascript">Javascript</label>
+
+            <input type="checkbox" name="php" id="php" value="php" />
+            <label for="php">Php</label>
+
+            <input type="checkbox" name="laravel" id="laravel" value="laravel" />
+            <label for="laravel">Laravel</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <input class="table-input" type="submit" value="Save" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
