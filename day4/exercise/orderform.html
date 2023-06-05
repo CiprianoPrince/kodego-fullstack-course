@@ -15,13 +15,13 @@
 
       body {
         color: transparent;
-        text-shadow: 0 0 1.2px #000;
+        text-shadow: 0 0 1.2px hsl(0, 0%, 0%);
       }
 
       h2 {
         color: hsl(0, 99%, 70%);
         padding: 1rem 0 0 0.5rem;
-        text-shadow: 0 0 0px #000;
+        text-shadow: 0 0 0px hsl(0, 0%, 0%);
       }
 
       input {
@@ -132,20 +132,17 @@
     <form>
       <h2>Land Of Boxes Order Form</h2>
 
+      <!-- table info-->
       <table class="table-info">
-        <!-- create text input box with label Name: -->
         <tr>
           <td class="table-info-data label"><label for="name">Name:</label></td>
           <td class="table-info-data"><input class="table-info-input" type="text" name="name" id="name" value="Walla Brody" /><br /></td>
         </tr>
 
-        <!-- create email input box with label Email: -->
         <tr>
           <td class="table-info-data label"><label for="email">Email:</label></td>
           <td class="table-info-data"><input class="table-info-input" type="text" name="email" id="email" value="w.brody@widgetsales.com" /><br /></td>
         </tr>
-
-        <!-- create text area with label Address: -->
 
         <tr>
           <td class="table-info-data label"><label for="address">Address:</label></td>
@@ -154,14 +151,13 @@
           </td>
         </tr>
 
-        <!-- create number input box with label Postal: -->
-
         <tr>
           <td class="table-info-data label"><label for="postal">Postcode:</label></td>
           <td class="table-info-data"><input type="number" name="postal" id="postal" value="7700" /></td>
         </tr>
       </table>
 
+      <!-- table box -->
       <table class="table-box">
         <tr>
           <th class="table-box-head">Product</th>
@@ -217,6 +213,7 @@
         </tr>
       </table>
 
+      <!-- table details -->
       <table class="table-card-details">
         <tr>
           <td class="table-card-details-data main-label" colspan="3"><p>Credit Card Details</p></td>
@@ -271,6 +268,7 @@
         </tr>
       </table>
 
+      <!-- table delivery -->
       <table class="table-delivery-address">
         <tr>
           <td class="table-delivery-address-data main-label">
@@ -283,7 +281,10 @@
         </tr>
       </table>
 
+      <!-- Send order button -->
       <input class="form-button" type="submit" value="Send order" />
+
+      <!-- Clear form button -->
       <input class="form-button reset" type="reset" value="Clear form" />
     </form>
   </body>
