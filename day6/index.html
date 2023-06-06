@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>CSS examples</title>
+	<style>
+		* {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		h1,
+		h2 {
+			color: darkgreen;
+			text-align: center;
+			text-transform: capitalize;
+			letter-spacing: 2px;
+			word-spacing: 10px;
+		}
+
+		h2 {
+			text-align: left;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+
+		h2 {
+			color: darkgreen;
+		}
+
+		p {
+			color: blue;
+			text-indent: 45px;
+		}
+
+		.right-align {
+			text-align: right;
+		}
+
+		#shadow {
+			text-shadow: 1px 2px 5px black
+		}
+
+		.size-1 {
+			font-size: x-large;
+			font-variant: small-caps;
+		}
+
+		.size-2 {
+			font-size: 200%;
+			font-stretch: expanded;
+		}
+
+		.size-3 {
+			font-size: 20%;
+			line-height: 100px;
+		}
+
+		body {
+			/* background-image: url(img/pride-rawr.gif); */
+			background-color: yellow;
+			background-repeat: cover;
+
+		}
+
+		/* img:hover {
+			opacity: 0.5;
+			border: 2px solid black;
+			height: 5rem;
+			box-shadow: 5px 5px 20px hsl(0, 100%, 50%);
+		} */
+
+		div.background {
+			border: 2px solid black;
+			background-image: url(img/pride-rawr.gif);
+			padding: 10rem;
+			box-shadow: inset 5px 5px 40px hsl(188, 97%, 51%);
+		}
+
+		.transparent-box {
+			background-color: white;
+			border: 1px solid black;
+			padding: 20px;
+			opacity: 0.8;
+		}
+
+		.shadow-box {
+			box-shadow: inset 5px 5px 20px hsl(147, 100%, 51%);
+			width: 150px;
+			height: 50px;
+			padding: 30px;
+			background-color: blanchedalmond;
+		}
+
+		.transition-box {
+			opacity: 1;
+			width: 50px;
+			height: 50px;
+			padding: 30px;
+			background-color: hsl(126, 87%, 50%);
+			transition: opacity 0.4s ease;
+		}
+
+		.transition-box:hover {
+			opacity: 0.5;
+			width: 500px;
+		}
+
+		.tooltip {
+			position: relative;
+			display: inline-block;
+			width: 150px;
+			height: 50px;
+			padding: 30px;
+			background-color: red;
+		}
+
+		.tooltip-show {
+			visibility: hidden;
+			width: 100px;
+			background-color: white;
+			text-align: center;
+			padding: 5px;
+		}
+
+		.tooltip:hover .tooltip-show {
+			visibility: visible;
+		}
+
+		.transform-box {
+			width: 150px;
+			height: 50px;
+			padding: 30px;
+			background-color: red;
+			color: white;
+			animation: roll 5s infinite;
+			transform: rotate(30deg);
+			transform-origin: 20px 20px;
+			border-radius: 50%;
+		}
+
+		@keyframes roll {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<h1>CSS Effect</h1>
+	<p>
+		There are several types of CSS effects
+	<ol>
+		<li>
+			opacity: determines the transparency of the element
+			<img src="img/pride-rawr.gif" alt="">
+			<div style="opacity: 1; background-color: red; padding: 20px">
+				opacity 1
+			</div>
+
+			<div style="opacity: 0.8; background-color: red; padding: 20px">
+				opacity 0.8
+			</div>
+
+			<div style="opacity: 0.7; background-color: red; padding: 20px">
+				opacity 0.7
+			</div>
+
+			<div class="background">
+				<div class="transparent-box">
+					this box contains the transparent property with text content
+				</div>
+			</div>
+		</li>
+
+		<li>
+			shadow: create a CSS Shadow to the HTML Element
+			<div class="shadow-box">
+				This is an element with boox shadow
+			</div>
+			<img src="img/pride-rawr.gif" alt="">
+		</li>
+		<li>
+			transition: use to animate properties
+			<div class="transition-box">this box contains a transtition.</div>
+		</li>
+
+		<li>
+			tooltip:
+			<div class="tooltip">
+				this is a sample of tooltip
+				<span class="tooltip-show">
+					i'm a tooltip
+				</span>
+			</div>
+		</li>
+
+		<li>transform: virtually controls the element
+			<div style="width: 100px; height: 30px; background-color: green;">
+				this is a normal div
+			</div>
+			<div class="transform-box">
+				This box contains the transform property
+			</div>
+		</li>
+		<li>animation</li>
+	</ol>
+	</p>
+
+	<hr>
+
+	<h1>CSS Gradient</h1>
+	<p>
+		There are three types of Gradients
+	<ol>
+		<li style="background: linear-gradient(100deg, yellow, green);">linear-gradient: create a linear gradient that shows
+			you multiple colors within a straight line</li>
+		<li
+			style="background-color: beige; background: radial-gradient(farthest-side at 30% 50%, gold 10%, silver 20%, brown 30%);">
+			radial-radient:</li>
+	</ol>
+	</p>
+
+	<hr>
+
+	<h1>CSS Colors</h1>
+	<p>
+		There are four value types for CSS colors
+	<ol>
+		<li>Color Keywords: setting colors for html elements</li>
+		<li style="background-color: rgba(20,77,189,0.689);">RBA: a css function that has parameter values which are red ,
+			green, blue rgb(red, blue, green)</li>
+		<li style="color: #000">Hex values: values that starts with "#" hash, followed by 'rrggbb' value</li>
+		<li style="background-color: hwb(200 7% 6%)">HSL: stands for HUE = 0 - 360, SATURATION -intensity and LIGHTNESS 0 -
+			100 </li>
+	</ol>
+	</p>
+
+	<hr>
+
+	<h1>CSS Background Color And Image Styling Properties</h1>
+	<h2>Background Propertities</h2>
+	<ul>
+		<li>background-color: sets the background color of the HTML elements</li>
+		<li>background-image: allows you to specify an image to use in your HTML elments</li>
+	</ul>
+
+	<hr>
+
+	<h1>CSS Typography</h1>
+	<h2 id="shadow">This is a Typography Style</h2>
+	<h2>Font Property</h2>
+	<ol>
+		<li>font-family: sets a font for an element. A specific font</li>
+		<ul>
+			<li>Family-name</li>
+			<ul>
+				<li>Arial,
+					Verdana,
+					serif</li>
+				<li>Times new roman,
+					Georgia,
+					san-serif</li>
+				<li>Lucida,
+					Courier - monospace</li>
+			</ul>
+			<li>generic-family</li>
+			<ul>
+				<li>Serif</li>
+				<li>San-serif</li>
+				<li>Monospace</li>
+			</ul>
+		</ul>
+		<li class="size-1">font-style: adds regular,italic or oblique effect to your font</li>
+		<li class="size-2">font-size: specify the size of the character</li>
+		<li class="size-3">font-weight: decide the thickness of your character</li>
+		<li>font-variant: transform the text to smaller,
+			uppercase</li>
+		<li>font-strecth: it condense or expanded space from fonts</li>
+		<li>line-height: specify the height of the box</li>
+		<li>font: short hand for font properties</li>
+	</ol>
+	<hr>
+	<p>
+	<h2>Popular CSS text styling options</h2>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laborum libero exercitationem iusto
+		consequuntur nesciunt saepe laudantium itaque deleniti obcaecati inventore,
+		eaque quis doloribus consectetur reprehenderit qui fugiat vel nemo veniam blanditiis nulla soluta accusantium eum
+		ea. Accusamus ipsam,
+		quidem corrupti nobis ipsum qui repellendus fugit dolores facilis consequatur autem?</p><span
+		style="color: darkorange; text-indent: 45px;">These are the following CSS properties</span>
+	<ol>
+		<li>color : sets the color of the text</li>
+		<li>text-align: is for the alignment of html text</li>
+		<li>text-transform: transform the text in uppercase,lowercase,or capitalize</li>
+		<li>text-decoration: sets decorative lines to emphasize points in the text</li>
+		<li>text-indent: is use for indentation of the first line of each paragraph</li>
+		<li>letter-spacing: spacing between chars</li>
+		<li>word-spacing: spacing between words</li>
+		<li>line-height: spacing vertically between linesof text</li>
+		<li>direction: defines the direction of a text. it can be from left to right or vice versa</li>
+		<li>text-shadow: applies a shadow to the text</li>
+		<li>text-overflow: defines how overflow text of the content</li>
+		<li>overflow-wrap: breaks long word and wrap them onto the next line. Used to prevent the text from overflowing
+			from the line box</li>
+		<li>word-break: sets the line breaking rules when text overflow in its content box</li>
+	</ol>
+	</p>
+</body>
+
+</html>
