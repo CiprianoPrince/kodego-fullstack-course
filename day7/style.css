@@ -1,0 +1,261 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+p {
+  margin-left: 25px;
+}
+
+/* BORDER */
+/* ====== */
+
+.examples-bord {
+  width: 50px;
+  height: 50px;
+}
+
+.flex-border {
+  width: 500px;
+  display: flex;
+  margin: 0px 25px;
+  justify-content: space-between;
+}
+
+.ex-border-solid {
+  border-radius: 5px;
+  background-color: hsl(190, 85%, 74%);
+  border: thick solid hsl(210, 62%, 58%);
+}
+
+.ex-border-dashed {
+  border-radius: 5px;
+  background-color: hsl(151, 85%, 81%);
+  border: thick dashed hsl(139, 36%, 55%);
+}
+
+.ex-border-dotted {
+  border-radius: 5px;
+  background-color: hsl(0, 85%, 81%);
+  border: thick dotted hsl(0, 98%, 68%);
+}
+
+.ex-border-double {
+  border-radius: 5px;
+  background-color: hsl(65, 98%, 76%);
+  border: thick double hsl(73, 53%, 58%);
+}
+
+.ex-border-groove {
+  border-radius: 5px;
+  background-color: hsl(284, 85%, 81%);
+  border: thick groove hsl(275, 69%, 72%);
+}
+
+/* MARGIN */
+/* ====== */
+
+.examples-marg {
+  width: 50px;
+  height: 50px;
+}
+
+.flex-margin {
+  width: 500px;
+  margin: 25px;
+  display: flex;
+  border-radius: 7px;
+  justify-content: space-evenly;
+  background-color: hsl(0, 0%, 82%);
+}
+
+.flex-margin-1,
+.flex-margin-2,
+.flex-margin-3,
+.flex-margin-4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: hsl(190, 100%, 88%);
+}
+
+.ex-margin-1val {
+  border-radius: 5px;
+  background-color: hsl(151, 85%, 81%);
+  border: 3px solid hsl(139, 36%, 55%);
+  margin: 15px;
+}
+
+.ex-margin-2val {
+  border-radius: 5px;
+  background-color: hsl(0, 85%, 81%);
+  border: 3px solid hsl(0, 98%, 68%);
+  margin: 20px 5px;
+}
+
+.ex-margin-3val {
+  border-radius: 5px;
+  background-color: hsl(65, 98%, 76%);
+  border: 3px solid hsl(73, 53%, 58%);
+  margin: 30px 25px 10px;
+}
+
+.ex-margin-4val {
+  border-radius: 5px;
+  background-color: hsl(284, 85%, 81%);
+  border: 3px solid hsl(275, 69%, 72%);
+  margin: 50px 25px 20px 45px;
+}
+
+/* PADDING */
+/* ======= */
+
+.examples-pad {
+  width: 70px;
+  height: 70px;
+}
+
+.flx-pd {
+  margin: 10px 25px;
+  width: max-content;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: hsl(0, 0%, 78%);
+}
+
+.flex-padding-1,
+.flex-padding-2,
+.flex-padding-3,
+.flex-padding-4 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 8px;
+  background-color: hsl(190, 100%, 88%);
+}
+
+/* TO UNDERSTAND THE CONCEPT OF PADDING, PAY ATTENTION TO THE BLUE BOX SURROUNDING EACH COLORED BOXES */
+
+/* 1 Value = the padding will be set for ALL SIDES */
+.flex-padding-1 {
+  padding: 55px;
+}
+
+/* 2 Values = the 1st value is for the TOP and BOTTOM
+            = the 2nd value is for the LEFT and RIGHT */
+.flex-padding-2 {
+  padding: 15px 35px;
+}
+
+/* 3 Values = the 1st value is for the TOP
+            = the 2nd value is for the RIGHT and LEFT
+            = the 3rd value is for the BOTTOM */
+.flex-padding-3 {
+  padding: 40px 30px 20px;
+}
+
+/* 4 Values (Clockwise)
+   = the 1st value is for the TOP
+   = the 2nd value is for the RIGHT
+   = the 3rd value is for the BOTTOM
+   = the 4th value is for the LEFT */
+.flex-padding-4 {
+  padding: 10px 30px 50px 70px;
+}
+
+.ex-padding-1val,
+.ex-padding-2val,
+.ex-padding-3val,
+.ex-padding-4val {
+  font-size: 13px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.ex-padding-1val {
+  background-color: hsl(151, 85%, 81%);
+  border: 3px solid hsl(139, 36%, 55%);
+}
+
+.ex-padding-2val {
+  background-color: hsl(0, 85%, 81%);
+  border: 3px solid hsl(0, 98%, 68%);
+}
+
+.ex-padding-3val {
+  background-color: hsl(65, 98%, 76%);
+  border: 3px solid hsl(73, 53%, 58%);
+}
+
+.ex-padding-4val {
+  background-color: hsl(284, 85%, 81%);
+  border: 3px solid hsl(275, 69%, 72%);
+}
+
+.links {
+  margin: 10px 25px;
+}
+
+a {
+  /* cursor: wait; */
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 78%);
+}
+
+a:link {
+  color: hsl(177, 70%, 41%);
+}
+
+a:visited {
+  color: hsl(300, 100%, 25%);
+}
+
+a:hover {
+  color: hsl(107, 64%, 43%);
+}
+
+a:active {
+  color: hsl(0, 100%, 50%);
+}
+
+table,
+th,
+td {
+  border: 1px solid hsl(0, 0%, 0%);
+  /* border-collapse: separate;
+  border-spacing: 15px; */
+  border-collapse: collapse;
+}
+
+table {
+  width: 80%;
+  margin: 0px 25px;
+}
+
+th {
+  height: 35px;
+  /* text-align: left; */
+  vertical-align: middle;
+  border-bottom: 2px solid hsl(0, 0%, 0%);
+  background-color: hsl(210, 13%, 50%);
+}
+
+td {
+  height: 35px;
+  /* horizontal */
+  text-align: center;
+  /* vertical */
+  vertical-align: middle;
+  border-bottom: 2px solid hsl(0, 0%, 0%);
+}
+
+tr.zebra:nth-child(even) {
+  background-color: hsla(120, 21%, 77%, 0.75);
+}
